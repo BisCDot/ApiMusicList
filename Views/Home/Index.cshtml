@@ -1,0 +1,82 @@
+﻿@Html.ActionLink("library","Library","Home", null, new { @class = "menu-libray" })
+@Html.ActionLink("Home","Index","Home", null, new { @class = "menu-home" })
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MusicPlayer</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+</head>
+<body>
+ <div id="main">
+        <div id="header">
+            <!--begin:nav-->
+            <ul id="nav">
+                <li class="active"> <a href="" class="menu-home"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="">Library</a></li>
+                <li><a href="">Radio</a></li>
+
+                <li>
+                    <a href="">More <i class="fa fa-angle-down"></i></a>
+                    <ul class="subnav">
+                        <li><a href="">New</a></li>
+                        <li><a href="">chill</a></li>
+                        <li><a href="">Music Favourite</a></li>
+                    </ul>
+
+                </li>
+
+            </ul>
+            <div class="search-bth">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+            <!-- end:nav-->
+        </div>
+        <!--begin:headerplaylist-->
+        <div id="systemPlaylistHero">
+            <div class="title-Text-Line">
+                    <h1 class="title-hot">New & Hot</h1>
+
+            </div>
+            <div class="title-singer">
+                <h2 class="singer"></h2>
+            </div>
+            <div class="cd">
+                <div class="cd-thumb">
+                </div>
+            </div>
+
+        </div>
+        <!--playlist-->
+        <div class="playlist">
+
+        </div>
+        <!--controls-->
+        <div class="play-Controls">
+            <div class="play-Controls-wrap">
+                <div class="btn btn-prev">
+                    <i class="fas fa-step-backward"></i>
+                </div>
+                <div class="btn btn-toggle-play">
+                    <i class="fas fa-pause icon-pause"></i>
+                    <i class="fas fa-play icon-play"></i>
+                </div>
+                <div class="btn btn-next">
+                    <i class="fas fa-step-forward"></i>
+                </div>
+                  <div class="btn btn-random">
+                    <i class="fas fa-random"></i>
+                  </div>
+                  <span id="current-time" class="time">00:00</span>
+                <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">    
+                <span id="duration-time" class="time">0:00</span>
+            </div>
+        </div>
+         <script src="~/js/site.js" ></script>
+</div>
+    
+</body>
+</html>

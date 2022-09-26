@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - MusicLibrary</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <!--begin:nav-->
+            <ul id="nav">
+                <li> <a href="@Url.Action("Index","Home")"><i class="fa fa-home"></i> Home</a></li>
+                <li class="active"><a href="library.html">library </a></li>
+                <li><a href="">Radio</a></li>
+
+                <li>
+                    <a href="">More <i class="fa fa-angle-down"></i></a>
+                    <ul class="subnav">
+                        <li><a href="">New</a></li>
+                        <li><a href="">chill</a></li>
+                        <li><a href="">Music Favourite</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="search-bth">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+            <!-- end:nav-->
+        </div>
+        <div class="form-main">
+            <div class="form">
+                <h3 class="heading">Thêm Nhạc Vào Trang Web</h3>
+                <div class="spacer"></div>
+                <div class="form-group">
+                    <label for="songname" class="form-label">Tên bài hát</label>
+                    <input id="song-name" name="song-name" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="singer" class="form-label">Ca sĩ</label>
+                    <input id="singer" name="singer" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="image" class="form-label">Link ảnh</label>
+                    <input id="image" name="image" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="path" class="form-label">Link bài hát</label>
+                    <input id="path" name="path" type="text" class="form-control">
+                </div>
+                <button class="form-submit">Thêm bài</button>
+            </div>
+        </div>
+
+        <script src="~/js/site.js"></script>
+    </div>
+</body>
+</html>
